@@ -1,0 +1,175 @@
+[
+  {
+    "id": "pexels",
+    "endpoint": "https://api.pexels.com/v1/search",
+    "apiKey": "your_pexels_api_key",
+    "apiKeyLocation": "header",
+    "requiredParams": ["query", "per_page", "page"],
+    "paramMap": {
+      "location": "query",
+      "limit": "per_page",
+      "page": "page"
+    },
+    "allParams": ["query", "per_page", "page", "orientation", "size", "color"],
+    "apiDoc": "https://www.pexels.com/api/documentation/",
+    "description": "Access free stock photos and videos for blog images.",
+    "type": "free"
+  },
+  {
+    "id": "tripadvisor",
+    "endpoint": "https://api.tripadvisor.com/api/partner/2.0/locations",
+    "apiKey": "your_tripadvisor_api_key",
+    "apiKeyLocation": "query",
+    "requiredParams": ["location_id", "lang"],
+    "paramMap": {
+      "location": "location_id",
+      "language": "lang"
+    },
+    "allParams": ["location_id", "lang", "currency", "limit"],
+    "apiDoc": "https://developer-tripadvisor.com/docs/",
+    "description": "Fetch information on travel locations, hotels, and attractions.",
+    "type": "freemium"
+  },
+  {
+    "id": "foursquare",
+    "endpoint": "https://api.foursquare.com/v2/venues/explore",
+    "apiKey": "your_foursquare_api_key",
+    "apiKeyLocation": "query",
+    "requiredParams": ["near", "client_id", "client_secret", "v"],
+    "paramMap": {
+      "location": "near",
+      "clientId": "client_id",
+      "clientSecret": "client_secret",
+      "version": "v"
+    },
+    "allParams": ["near", "client_id", "client_secret", "v", "query", "limit", "radius"],
+    "apiDoc": "https://developer.foursquare.com/docs",
+    "description": "Discover local places and experiences in cities worldwide.",
+    "type": "free"
+  },
+  {
+    "id": "yelp_fusion",
+    "endpoint": "https://api.yelp.com/v3/businesses/search",
+    "apiKey": "your_yelp_api_key",
+    "apiKeyLocation": "header",
+    "requiredParams": ["location"],
+    "paramMap": {
+      "location": "location",
+      "term": "term"
+    },
+    "allParams": ["location", "term", "radius", "categories", "limit", "offset", "sort_by"],
+    "apiDoc": "https://www.yelp.com/developers/documentation/v3",
+    "description": "Access local business information and reviews for travel planning.",
+    "type": "freemium"
+  },
+  {
+    "id": "unsplash",
+    "endpoint": "https://api.unsplash.com/search/photos",
+    "apiKey": "your_unsplash_api_key",
+    "apiKeyLocation": "header",
+    "requiredParams": ["query", "per_page", "page"],
+    "paramMap": {
+      "location": "query",
+      "perPage": "per_page",
+      "page": "page"
+    },
+    "allParams": ["query", "per_page", "page", "orientation", "color", "order_by"],
+    "apiDoc": "https://unsplash.com/documentation",
+    "description": "Find free high-quality images for blogs and travel articles.",
+    "type": "free"
+  },
+  {
+    "id": "skyscanner",
+    "endpoint": "https://partners.api.skyscanner.net/apiservices/browsequotes/v1.0",
+    "apiKey": "your_skyscanner_api_key",
+    "apiKeyLocation": "query",
+    "requiredParams": ["country", "currency", "locale", "originPlace", "destinationPlace", "outboundDate"],
+    "paramMap": {
+      "country": "country",
+      "currency": "currency",
+      "locale": "locale",
+      "origin": "originPlace",
+      "destination": "destinationPlace",
+      "date": "outboundDate"
+    },
+    "allParams": ["country", "currency", "locale", "originPlace", "destinationPlace", "outboundDate", "inboundDate", "cabinClass", "adults", "children"],
+    "apiDoc": "https://skyscanner.github.io/slate/",
+    "description": "Search for flights and travel deals for trips and blog recommendations.",
+    "type": "freemium"
+  },
+  {
+    "id": "openlibrary",
+    "endpoint": "https://openlibrary.org/search.json",
+    "apiKey": null,
+    "apiKeyLocation": null,
+    "requiredParams": ["q"],
+    "paramMap": {
+      "query": "q"
+    },
+    "allParams": ["q", "author", "title", "subject", "limit"],
+    "apiDoc": "https://openlibrary.org/developers/api",
+    "description": "Access a free library of books, useful for blog research.",
+    "type": "free"
+  },
+  {
+    "id": "teleport",
+    "endpoint": "https://api.teleport.org/api/urban_areas/",
+    "apiKey": null,
+    "apiKeyLocation": null,
+    "requiredParams": ["slug"],
+    "paramMap": {
+      "location": "slug"
+    },
+    "allParams": ["slug", "city:search-results", "city:scores", "city:images"],
+    "apiDoc": "https://developers.teleport.org/",
+    "description": "Get data on city life quality, including cost of living and images.",
+    "type": "free"
+  },
+  {
+    "id": "pixabay",
+    "endpoint": "https://pixabay.com/api/",
+    "apiKey": "your_pixabay_api_key",
+    "apiKeyLocation": "query",
+    "requiredParams": ["q", "key"],
+    "paramMap": {
+      "query": "q",
+      "apiKey": "key"
+    },
+    "allParams": ["q", "key", "image_type", "category", "colors", "orientation", "safesearch", "order", "page", "per_page"],
+    "apiDoc": "https://pixabay.com/api/docs/",
+    "description": "Find free images and videos for blog visuals.",
+    "type": "freemium"
+  },
+  {
+    "id": "giphy",
+    "endpoint": "https://api.giphy.com/v1/gifs/search",
+    "apiKey": "your_giphy_api_key",
+    "apiKeyLocation": "query",
+    "requiredParams": ["q", "api_key"],
+    "paramMap": {
+      "query": "q",
+      "apiKey": "api_key"
+    },
+    "allParams": ["q", "api_key", "limit", "offset", "rating", "lang"],
+    "apiDoc": "https://developers.giphy.com/docs/",
+    "description": "Find GIFs to make blogs more engaging.",
+    "type": "freemium"
+  },
+  {
+    "id": "opentripmap",
+    "endpoint": "https://api.opentripmap.com/0.1/en/places/radius",
+    "apiKey": "your_opentripmap_api_key",
+    "apiKeyLocation": "query",
+    "requiredParams": ["radius", "lon", "lat", "apikey"],
+    "paramMap": {
+      "apiKey": "apikey",
+      "longitude": "lon",
+      "latitude": "lat",
+      "radius": "radius"
+    },
+    "allParams": ["radius", "lon", "lat", "kinds", "rate", "limit", "apikey"],
+    "apiDoc": "https://opentripmap.io/docs",
+    "description": "Access points of interest and attractions for travel blogs.",
+    "type": "freemium"
+  }
+]
